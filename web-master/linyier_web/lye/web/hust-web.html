@@ -1,0 +1,223 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>hust-web</title>
+	
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<link rel="stylesheet" href="../css/animate.css">
+<link rel="stylesheet" href="../css/animsition.css">
+<script src="../js/animsition.min.js"></script>
+<link rel="stylesheet" href="../css/sandboxweb.css">
+
+	
+</head>
+<body class="animsition">
+	<div class="fir"><span>学校官网</span><div id="lye10"><img src="../image/web1.png" width="100%"; height="100%"></div></div>
+	<div class="sec"><span>Hub系统</span><div id="lye20"><img src="../image/web2.png" width="100%"; height="100%"></div></div>
+	<div class="thi"><span>信息门户</span><div id="lye30"><img src="../image/web3.png" width="100%"; height="100%"></div></div>
+	<div class="for"><span>图书馆</span><div id="lye40"><img src="../image/web4.png" width="100%"; height="100%"></div></div>
+	<div class="fiv"><span>学院网站</span><div id="lye50"><img src="../image/web5.png" width="100%"; height="100%"></div></div>
+	<div class="six"><span>教务处</span><div id="lye60"><img src="../image/web6.png" width="100%"; height="100%"></div></div>
+	
+	<div id="blank"></div>
+	
+	<a href="http://www.hust.edu.cn/"><div id="lye1" class="hid">学校官网</div></a>
+	<a href="http://hubs.hust.edu.cn/index.jsp"><div id="lye2" class="hid">Hub系统</div></a>
+	<a href="https://pass.hust.edu.cn/cas/login?service=http%3A%2F%2Fone.hust.edu.cn%2Fdcp%2Fforward.action%3Fpath%3D%2Fportal%2Fportal%26p%3Dhome"><div id="lye3" class="hid">信息门户</div></a>
+	<a href="http://www.lib.hust.edu.cn/"><div id="lye4" class="hid">图书馆</div></a>
+	<a href="http://cs.hust.edu.cn/"><div id="lye5" class="hid">学院网站</div></a>
+	<a href="http://jwc.hust.edu.cn/"><div id="lye6" class="hid">教务处</div></a>
+	
+	<div id="tex1" style="font-family: NSimSun;">网</div>
+	<div id="tex2" style="font-family: NSimSun;">页</div>
+	<div id="tex3" style="font-family: NSimSun;">导</div>
+	<div id="tex4" style="font-family: NSimSun;">航</div>
+	
+	<div id="bac"><a href="../index.html" style="color: #000000;text-decoration: none;font-size: 20px;" class="animsition-link">Back</a></div>
+	
+<script language="javascript">
+document.getElementById("lye10").onmouseover=function(){document.getElementById("lye1").className="vis animated pulses";}
+document.getElementById("lye20").onmouseover=function(){document.getElementById("lye2").className="vis animated pulses";}
+document.getElementById("lye30").onmouseover=function(){document.getElementById("lye3").className="vis animated pulses";}
+document.getElementById("lye40").onmouseover=function(){document.getElementById("lye4").className="vis animated pulses";}
+document.getElementById("lye50").onmouseover=function(){document.getElementById("lye5").className="vis animated pulses";}
+document.getElementById("lye60").onmouseover=function(){document.getElementById("lye6").className="vis animated pulses";}
+document.getElementById("blank").onmouseover=function(){document.getElementById("lye1").className="hid";
+														document.getElementById("lye2").className="hid";
+														document.getElementById("lye3").className="hid";
+														document.getElementById("lye4").className="hid";
+														document.getElementById("lye5").className="hid";
+													    document.getElementById("lye6").className="hid";
+													   													}
+</script>
+<script>
+$(document).ready(function() {
+  $(".animsition").animsition({
+    inClass: 'fade-in-up',
+    outClass: 'fade-out-down',
+    inDuration: 1500,
+    outDuration: 800,
+    linkElement: '.animsition-link',
+    loading: true,
+    loadingParentElement: 'body', 
+    loadingClass: 'animsition-loading',
+    loadingInner: '', 
+    timeout: false,
+    timeoutCountdown: 5000,
+    onLoadEvent: true,
+    browser: [ 'animation-duration', '-webkit-animation-duration'],
+    overlay : false,
+    overlayClass : 'animsition-overlay-slide',
+    overlayParentElement : 'html',
+    transition: function(url){ window.location.href = url; }
+  });
+});
+</script>
+<script>
+$('#tex1').addClass('animated slideInDown');
+	setTimeout(function(){
+		$('#tex1').removeClass('slideInDown');
+		$('#tex1').addClass('fadeOut');
+		setTimeout(function(){
+			$('#tex1').removeClass('fadeOut');
+			$('#tex1').addClass('fadeInUp');
+			setTimeout(function(){
+				$('#tex1').removeClass('fadeInUp');
+				$('#tex1').addClass('fadeOut');
+				setTimeout(function(){
+					$('#tex1').removeClass('fadeOut');
+					$('#tex1').addClass('fadeInDown');
+				},1000);
+			},2000);
+		},1000);
+	},2000);	
+setInterval(function(){
+	setTimeout(function(){
+		$('#tex1').removeClass('fadeInDown');
+		$('#tex1').addClass('fadeOut');
+		setTimeout(function(){
+			$('#tex1').removeClass('fadeOut');
+			$('#tex1').addClass('fadeInUp');
+			setTimeout(function(){
+				$('#tex1').removeClass('fadeInUp');
+				$('#tex1').addClass('fadeOut');
+				setTimeout(function(){
+					$('#tex1').removeClass('fadeOut');
+					$('#tex1').addClass('fadeInDown');
+				},1000);
+			},2000);
+		},1000);
+	},2000);
+},6001);
+	
+$('#tex2').addClass('animated slideInRight');
+	setTimeout(function(){
+		$('#tex2').removeClass('slideInRight');
+		$('#tex2').addClass('fadeOut');
+		setTimeout(function(){
+			$('#tex2').removeClass('fadeOut');
+			$('#tex2').addClass('fadeInLeft');
+			setTimeout(function(){
+				$('#tex2').removeClass('fadeInLeft');
+				$('#tex2').addClass('fadeOut');
+				setTimeout(function(){
+					$('#tex2').removeClass('fadeOut');
+					$('#tex2').addClass('fadeInRight');
+				},1000);
+			},2000);
+		},1000);
+	},2000);	
+setInterval(function(){
+	setTimeout(function(){
+		$('#tex2').removeClass('fadeInRight');
+		$('#tex2').addClass('fadeOut');
+		setTimeout(function(){
+			$('#tex2').removeClass('fadeOut');
+			$('#tex2').addClass('fadeInLeft');
+			setTimeout(function(){
+				$('#tex2').removeClass('fadeInLeft');
+				$('#tex2').addClass('fadeOut');
+				setTimeout(function(){
+					$('#tex2').removeClass('fadeOut');
+					$('#tex2').addClass('fadeInRight');
+				},1000);
+			},2000);
+		},1000);
+	},2000);
+},6001);
+	
+$('#tex3').addClass('animated slideInUp');
+	setTimeout(function(){
+		$('#tex3').removeClass('slideInUp');
+		$('#tex3').addClass('fadeOut');
+		setTimeout(function(){
+			$('#tex3').removeClass('fadeOut');
+			$('#tex3').addClass('fadeInDown');
+			setTimeout(function(){
+				$('#tex3').removeClass('fadeInDown');
+				$('#tex3').addClass('fadeOut');
+				setTimeout(function(){
+					$('#tex3').removeClass('fadeOut');
+					$('#tex3').addClass('fadeInUp');
+				},1000);
+			},2000);
+		},1000);
+	},2000);	
+setInterval(function(){
+	setTimeout(function(){
+		$('#tex3').removeClass('fadeInUp');
+		$('#tex3').addClass('fadeOut');
+		setTimeout(function(){
+			$('#tex3').removeClass('fadeOut');
+			$('#tex3').addClass('fadeInDown');
+			setTimeout(function(){
+				$('#tex3').removeClass('fadeInDown');
+				$('#tex3').addClass('fadeOut');
+				setTimeout(function(){
+					$('#tex3').removeClass('fadeOut');
+					$('#tex3').addClass('fadeInUp');
+				},1000);
+			},2000);
+		},1000);
+	},2000);
+},6001);
+	
+$('#tex4').addClass('animated slideInLeft');
+	setTimeout(function(){
+		$('#tex4').removeClass('slideInLeft');
+		$('#tex4').addClass('fadeOut');
+		setTimeout(function(){
+			$('#tex4').removeClass('fadeOut');
+			$('#tex4').addClass('fadeInRight');
+			setTimeout(function(){
+				$('#tex4').removeClass('fadeInRight');
+				$('#tex4').addClass('fadeOut');
+				setTimeout(function(){
+					$('#tex4').removeClass('fadeOut');
+					$('#tex4').addClass('fadeInLeft');
+				},1000);
+			},2000);
+		},1000);
+	},2000);	
+setInterval(function(){
+	setTimeout(function(){
+		$('#tex4').removeClass('fadeInLeft');
+		$('#tex4').addClass('fadeOut');
+		setTimeout(function(){
+			$('#tex4').removeClass('fadeOut');
+			$('#tex4').addClass('fadeInRight');
+			setTimeout(function(){
+				$('#tex4').removeClass('fadeInRight');
+				$('#tex4').addClass('fadeOut');
+				setTimeout(function(){
+					$('#tex4').removeClass('fadeOut');
+					$('#tex4').addClass('fadeInLeft');
+				},1000);
+			},2000);
+		},1000);
+	},2000);
+},6001);
+</script>	
+</body>
+</html>

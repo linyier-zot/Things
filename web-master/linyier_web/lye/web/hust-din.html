@@ -1,0 +1,122 @@
+<!doctype html>
+<html class="animsition">
+<head>
+<meta charset="utf-8">
+<title>hust-din</title>
+
+<link rel="stylesheet" href="../css/animsition.css">
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script src="../js/animsition.min.js"></script>
+<link rel="stylesheet" href="../css/animate.css">
+<link rel="stylesheet" href="../css/sandboxdin.css">
+</head>
+
+<body style="background-color: wheat;">
+
+<div id="top-" class="hid"><div id="bac" style="font-size: 40px;"><a href="../index.html" style="color: #000000;text-decoration: none;" class="animsition-link">Back</a></div><div id="bactop"><a onclick="pageScroll()">Top</a></div></div>
+	
+<div id="title" style="font-size: 90px;color: aliceblue;opacity: 0.9;">华小科家今天的饭</div>
+<div id="lye0"></div>
+	
+<div id="lye10" class="animated fadeInUp"><div id="lye1"><div class="num" style="left: calc(50% - 150px);top: 80px;text-align: center;font-size:40px">坐标：东篱食堂</div><div style="left: calc(50% - 150px);top: 160px;font-size: 30px;" class="num">铁板里脊饭</div></div><div id="lye1-"><img id="pic1" src="../image/pic-1.jpg" width="80%" height="80%"><img id="pic1back" src="../image/pic-1.jpg"></div></div>
+<div id="lye20"  class="ready hidd"><div id="lye2"><div class="num" style="left: calc(50% - 150px);top:80px;font-size:40px">坐标：韵酒</div><div class="num" style="left: calc(50% - 150px);top: 160px;font-size: 30px;color: ">鸡丝油泼面</div></div><div id="lye2-"><img id="pic2" src="../image/pic-2.jpg" width="80%" height="80%"><img id="pic2back" src="../image/pic-2.jpg"></div></div>
+	
+<div id="lye-back-1"><div id="pan1">学一</div><div id="pan2">大</div><div id="pan3">盘鸡</div></div>
+<div id="lye-back-2"></div>
+	
+
+<div id="lye30" class="ready hidd"><div id="lye3"><div style="width: 40px; left: calc(40% - 20px);top:40px;text-align: center;font-size:40px">坐标<br>：丁香园</div><div style="width: 30px; left: calc(60% - 15px);top: 100px;font-size: 30px;color: ">麻辣烫</div></div><div id="lye3-"><img src="../image/pic-3.jpg" width="90%" height="90%" style="border-radius: 20px;right: 10%;top: 5%;"></div></div>
+<div id="lye40" class="ready hidd"><div id="lye4" class="animated fade-in"><div style="width: 40px; right: calc(40% - 20px);top:40px;text-align: center;font-size:40px">坐标<br>：丁香园</div><div style="width: 30px; right: calc(60% - 15px);top: 100px;font-size: 30px;color: ">干锅饭</div></div><div id="lye4-"><img src="../image/pic-4.jpg" width="90%" height="90%" style="border-radius: 20px;left: 10%;top: 5%;"></div></div>	
+
+<div id="lye-back-3"></div>
+
+
+<div id="lye50" class="ready hidd"><div id="lye5"><div  class="num" style="left: calc(50% - 150px);top:80px;text-align: center;font-size:40px">坐标：学一食堂</div><div style="left: calc(50% - 150px);top: 160px;font-size: 30px;color: " class="num" >新疆小盘鸡</div></div><div id="lye5-"><img src="../image/pic-5.jpg" width="100%" height="100%" style="border-top-right-radius: 30px;"></div></div>
+<div id="lye60" class="ready hidd"><div id="lye6"><div style="left: calc(50% - 150px);top:80px;text-align: center;font-size:40px" class="num" >坐标：东一食堂</div><div style="left: calc(50% - 150px);top: 160px;font-size: 30px;color: " class="num" >米团子</div></div><div id="lye6-"><img src="../image/pic-6.jpg" width="100%" height="100%" style="border-bottom-left-radius: 30px;"></div></div>
+	
+<div class="ready hidd" id="cal"><img id="imgmark1" src="../image/mark1.jpg"><img id="imgmark2" src="../image/mark2.jpg"><img id="imgmark3" src="../image/mark3.jpg"><img id="imgmark4" src="../image/mark4.jpg"><img id="imgca1" src="../image/ca1.jpg"><img id="imgca2" src="../image/cal3.jpg"><img id="imgca3" src="../image/gif1.gif"><img id="imgca4" src="../image/gif2.gif"><img id="imgca5" src="../image/ca2.jpg"><img id="imgtop" src="../image/line.png"><img id="imgbot" src="../image/line.png"></div>	
+	
+<div id="lye70" class="ready hidd"><div id="lye7"><div style="left: calc(50% - 150px);top:80px;text-align: center;font-size:40px" class="num" >坐标：丁香园</div><div style="left: calc(50% - 150px);top: 160px;font-size: 30px;color: " class="num" >孜然烤土豆饭</div></div><div id="lye7-"><img src="../image/pic-7.jpg" width="100%" height="100%" style="border-top-right-radius: 30px;"></div></div>
+<div id="lye80" class="ready hidd"><div id="lye8"><div style="left: calc(50% - 150px);top:80px;text-align: center;font-size:40px" class="num" >坐标：东一食堂</div><div style="left: calc(50% - 150px);top: 160px;font-size: 30px;color: " class="num" >鸡柳饭</div></div><div id="lye8-"><img src="../image/pic-8.jpg" width="100%" height="100%"  style="border-bottom-left-radius: 30px;"></div></div>
+<div id="bott"><p style="position: absolute;left: 40%;">到底了呐...点我返回》</p><div style="position: absolute;left: 50%;width: 80px;height: 50px;line-height: 50px;text-align: center;background: aliceblue;opacity: inherit;border-radius: 20px;"><a onclick="pageScroll()">TOP</a></div></div>
+
+<script>
+$(document).ready(function() {
+  $(".animsition").animsition({
+    inClass: 'fade-in-left',
+    outClass: 'fade-out-left',
+    inDuration: 1500,
+    outDuration: 800,
+    linkElement: '.animsition-link',
+    loading: true,
+    loadingParentElement: 'body',
+    loadingClass: 'animsition-loading',
+    loadingInner: '', 
+    timeout: false,
+    timeoutCountdown: 5000,
+    onLoadEvent: true,
+    browser: [ 'animation-duration', '-webkit-animation-duration'],
+    overlay : false,
+    overlayClass : 'animsition-overlay-slide',
+    overlayParentElement : 'html',
+    transition: function(url){ window.location.href = url; }
+  });
+});
+</script>
+	
+<script>
+$(function(){
+	var nav2=50;
+	$(window).scroll(function(){
+		var scrollPos=$(window).scrollTop();
+		if(scrollPos>=nav2){
+//			$("#lye20").addClass("animated slideInUp");
+			$("#top-").removeClass("hid");
+			$("#top-").addClass("vis");
+		}else{
+//			$("#lye20").remove("animated slideInUp")
+		}
+//		if(scrollPos>=navb1){
+//			$("#lye-back-1").addClass("animated slideInUp")
+//		}else{
+//			$("#lye-back-1").remove("animated slideInUp")
+//		}
+//		if(scrollPos>=navb2){
+//			$("#lye-back-2").addClass("animated slideInUp")
+//		}else{
+//			$("#lye-back-2").remove("animated slideInUp")
+//		}
+/*		if(scrollPos>=nav3){$("#lye30").addClass("animated fadeInUp")}else{$("#lye30").remove("animated fadeInUp")}
+		if(scrollPos>=nav4){$("#lye40").addClass("animated fadeInUp")}else{$("#lye40").remove("animated fadeInUp")}
+		if(scrollPos>=navb3){$("#lye-back-3").addClass("animated fadeInUp")}else{$("#lye-back-3").remove("animated fadeInUp")}
+		if(scrollPos>=nav5){$("#lye50").addClass("animated fadeInUp")}else{$("#lye50").remove("animated fadeInUp")}
+		if(scrollPos>=nav6){$("#lye60").addClass("animated fadeInUp")}else{$("#lye60").remove("animated fadeInUp")}
+		if(scrollPos>=nav7){$("#lye70").addClass("animated fadeInUp")}else{$("#lye70").remove("animated fadeInUp")}
+		if(scrollPos>=nav8){$("#lye80").addClass("animated fadeInUp")}else{$("#lye80").remove("animated fadeInUp")}	*/
+	});
+})	
+$(window).scroll(function() {
+  $(".ready").each(function(){
+    var pos = $(this).offset().top;
+
+    var winTop = $(window).scrollTop();
+    if (pos < winTop + 700) {
+	  $(this).removeClass("hidd");
+      $(this).addClass("animated fadeInUp");
+    }
+  });
+});
+	
+function pageScroll(){
+    window.scrollBy(0,-100);
+    scrolldelay = setTimeout('pageScroll()',20);
+    var sTop=document.documentElement.scrollTop+document.body.scrollTop;
+    if(sTop==0) clearTimeout(scrolldelay);
+}
+	
+</script>
+	
+
+
+</body>
+</html>

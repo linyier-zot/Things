@@ -1,0 +1,140 @@
+body{
+  		width: 100%;
+  		height: 100%;
+  		margin: 0;
+  		padding: 0;
+		overflow-x: hidden;
+		overflow-y: hidden;
+  
+	}
+#lye1{
+		position: relative;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: 60px;
+		opacity: 0.1;
+		z-index: 1;
+		background: #FFFFFF;
+	}
+#lye2{
+		position: absolute;
+		left: calc(50% - 400px);
+		top: calc(40% - 150px);
+		width: 800px;
+		height: 300px;
+		text-align: center;
+		line-height: 300px;
+		z-index: 1;
+		animation-duration: 3s;
+		animation-delay: 0.5s;
+		
+	}
+#lye3{
+		position: absolute;
+		left: calc(50% - 300px);
+		top: calc(50% - 150px);
+		width: 600px;
+		height: 300px;
+		text-align: center;
+		line-height: 300px;
+		z-index: 1;
+		animation-duration: 3s;
+		animation-delay: 0.5s;
+		
+	}
+	/*lye4*/
+	.lye400{position: absolute;
+		left: 600px;
+		top: 470px;
+		width: 400px;
+		height: 300px;}
+	#lye4{
+		position: absolute;
+		left:0px;
+		top:0px;
+		width: 100px;
+		height: 50px;
+		text-align: center;
+		line-height: 50px;
+		z-index: 1;
+		background-color: #000000;
+		opacity: 0.1;
+		border-radius: 20px;
+		border: 1px solid #FFFFFF;
+	}
+	#lye4-{
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		width: 100px;
+		height: 50px;
+		text-align: center;
+		line-height: 50px;
+		opacity: 0.8;
+		z-index: 2;
+	}
+	.lye40{position:fixed;left:calc(50% - 150px);top:525px;width: 300px;height: 50px;background: #000000;text-align: center;line-height: 50px;z-index: 0;opacity: 0;transition: all 1s;visibility: hidden;border-radius: 10px;border: 1px solid #FFFFFF;}
+	.lye400:hover .lye40{visibility: visible;opacity: 0.5;z-index: 3}
+	#lye4-:hover{background-color: #000000;opacity: 0.4;border-radius: 20px;}
+	/*lye5*/
+	.lye500{position: absolute;
+			right: 600px;
+			top: 470px;
+			width: 400px;
+			height: 300px;}
+	#lye5{
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		width: 100px;
+		height: 50px;
+		text-align: center;
+		line-height: 50px;
+		z-index: 1;
+		background-color: #000000;
+		opacity: 0.1;
+		border-radius: 20px;
+		border: 1px solid #FFFFFF;
+	}
+
+	#lye5-{
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		width: 100px;
+		height: 50px;
+		text-align: center;
+		line-height: 50px;
+		opacity: 0.8;
+		z-index: 2;
+	}
+	.lye50{position: fixed;left:calc(50% - 150px);top:525px;width: 300px;height: 50px;background: #000000;text-align: center;line-height: 50px;z-index: 0;opacity: 0;transition: all 1s;visibility: hidden;border-radius: 10px;border: 1px solid #FFFFFF;}
+	.lye500:hover .lye50{visibility: visible;opacity: 0.5;z-index: 3}
+	#lye5-:hover{background-color: #000000;opacity: 0.4;border-radius: 20px;}
+
+/*background-change*/
+#frame{position:absolute;left: 0px;top: 0px; width:100%;height:100%;overflow:hidden;z-index: 0}
+#photos {  position: absolute;z-index:1;  width:300%;}
+#photos img{float:left;width:33.333%;height:50%}
+.play{ animation: ma 15s ease-out infinite alternate;}
+@keyframes ma {
+        0%,40% {        margin-left: 0px;       }
+        45%,70% {       margin-left: -100%;    }
+	75%,100% {margin-left: -200%;}
+    }
+/*mods*/
+	.mods00{position: absolute;right:0px;top: 0px;width: 328px; height: 100%;}
+	.mods0{position: absolute;top: 60px;right: 0px;width: 400px;height: calc(100% - 60px);overflow: auto; visibility: hidden;background:#000000 ;opacity: 0; transition: all 3s;font-size: 26px;}
+	.mods{position:absolute;left:0px;top:0px;height:60px;width:107px; line-height:60px;font-size: 30px;text-align: center;font-family:Microsoft YaHei;background: #CFCFCF;z-index: 3;opacity: 0.3;}
+	.mods:hover{border-left:1px solid #000000 ;border-right: 1px solid #000000;opacity: 0.6;}
+	.mods00:hover .mods0{visibility: visible;z-index: 3;opacity: 0.6;}
+/*contact*/
+	.contact00{position: absolute;right: 0px;top: 0px;width: 220px;height: 100%;}
+	.contact0{position: absolute;top: 60px;right: 0px;width: 220px;height:40px;visibility: hidden;background: #000000;opacity: 0;transition: all 3s;font-size: 26px}
+	.contact1{position:absolute;left:0px;top:0px;height:60px;width: inherit;line-height:60px;font-size: 30px;text-align: center; font-family:Microsoft YaHei;background:#CFCFCF;z-index: 3;opacity: 0.3;}
+	.contact1:hover{border-left: 1px solid #000000;border-right: 1px solid #000000;opacity: 0.6;}
+	.contact00:hover .contact0{visibility: visible;z-index: 3;opacity: 0.6;}
+/*back*/
+	.bac{position:fixed;right:329px;height: 60px;top: 0px;width: 100px;line-height: 60px;font-size: 30px;text-align: center;font-family:amethysta;background: #CFCFCF;z-index: 3;opacity: 0.3;}
+	.bac:hover{border-left:1px solid #000000 ;border-right: 1px solid #000000;opacity: 0.6;}

@@ -1,0 +1,83 @@
+<!doctype html>
+<html style="height:100%" class="animsition">
+<head>
+<meta charset="utf-8">
+<title>index</title>
+	
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<link rel="stylesheet" href="css/animate.css"/>
+<link rel="stylesheet" href="css/animsition.css">
+<script src="js/animsition.min.js"></script>
+<link rel="stylesheet" href="css/sandboxindex.css">
+	
+</head>
+<body>
+<div id="lye00"></div>
+<div id="title">Record something</div>
+<div id="lye0" style="font-family:Microsoft YaHei;font-size: 45px;color: white;opacity: 0.5;" class="animated jackInTheBox">Welcome!</div>
+<div id="lye1"><a href="web/hust-web.html" style="font-family:Microsoft YaHei;font-size: 40px;color: white;opacity: 0.9;text-decoration:none;" class="animsition-link animated bounce">hust-web</a></div>
+<div id="lye2"><a href="web/album.html" style="font-family:Microsoft YaHei;font-size: 40px;color: white;opacity: 0.9;text-decoration:none;" class="animsition-link animated bounce">album</a></div>
+<div id="lye3"><a href="web/hust-din.html" style="font-family:Microsoft YaHei;font-size: 40px;color: white;opacity: 0.9;text-decoration:none;" class="animsition-link animated bounce">hust-din</a></div>
+<div id="lye4"><a href="web/mc-part.html" style="font-family:Microsoft YaHei;font-size: 40px;color: white;opacity: 0.9;text-decoration:none;" class="animsition-link animated bounce">mc-part</a></div>
+<div id="dormback0"><a href=" http://abcd5353980.gitee.io/group_zhuy
+" style="color: aquamarine;text-decoration: none;">BACK</a></div>
+<div id="dormback"></div>
+	
+	
+<script>
+$(document).ready(function() {
+  $(".animsition").animsition({
+    inClass: 'fade-in',
+    outClass: 'fade-out',
+    inDuration: 1500,
+    outDuration: 800,
+    linkElement: '.animsition-link',
+    // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+    loading: true,
+    loadingParentElement: 'html', //animsition wrapper element
+    loadingClass: 'animsition-loading',
+    loadingInner: '', // e.g '<img src="loading.svg" />'
+    timeout: false,
+    timeoutCountdown: 5000,
+    onLoadEvent: true,
+    browser: [ 'animation-duration', '-webkit-animation-duration'],
+    // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+    // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+    overlay : false,
+    overlayClass : 'animsition-overlay-slide',
+    overlayParentElement : 'body',
+    transition: function(url){ window.location.href = url; }
+  });
+});</script>
+	
+<script>
+$('#lye1').addClass('animated slideInDown');
+setTimeout(function(){
+	$('#lye1').removeClass('slideInDown');
+	$('#lye1').addClass('heartBeat');
+},1000);
+</script>
+<script>
+$('#lye2').addClass('animated slideInUp');
+setTimeout(function(){
+	$('#lye2').removeClass('slideInUp');
+	$('#lye2').addClass('heartBeat');
+},1000);
+</script>
+<script>
+$('#lye3').addClass('animated slideInRight');
+setTimeout(function(){
+	$('#lye3').removeClass('slideInRight');
+	$('#lye3').addClass('heartBeat');
+},1000);
+</script>
+<script>
+$('#lye4').addClass('animated slideInLeft');
+setTimeout(function(){
+	$('#lye4').removeClass('slideInLeft');
+	$('#lye4').addClass('heartBeat');
+},1000);
+</script>
+	
+</body>
+</html>

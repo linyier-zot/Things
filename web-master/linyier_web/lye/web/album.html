@@ -1,0 +1,326 @@
+<!doctype html>
+<html class="animsition"><head>
+<meta charset="utf-8">
+<title>album</title>
+
+<link rel="stylesheet" href="../css/animsition.css">	
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script src="../js/animsition.min.js"></script>
+<link rel="stylesheet" href="../css/sandboxalbum.css">
+<link rel="stylesheet" href="../css/animate.css">
+	
+<script>
+$(document).ready(function() {
+  $(".animsition").animsition({
+    inClass: 'fade-in-down',
+    outClass: 'fade-out-up',
+    inDuration: 1500,
+    outDuration: 800,
+    linkElement: '.animsition-link',
+    loading: true,
+    loadingParentElement: 'html',
+    loadingClass: 'animsition-loading',
+    loadingInner: '', 
+    timeout: false,
+    timeoutCountdown: 5000,
+    onLoadEvent: true,
+    browser: [ 'animation-duration', '-webkit-animation-duration'],
+    overlay : false,
+    overlayClass : 'animsition-overlay-slide',
+    overlayParentElement : 'body',
+    transition: function(url){ window.location.href = url; }
+  });
+});
+</script>
+
+</head>
+<body >
+
+	<div id="tt1">A</div>
+	<div id="tt2">L</div>
+	<div id="tt3">B</div>
+	<div id="tt4">U</div>
+	<div id="tt5">M</div>
+	
+	<div id="bac"><a href="../index.html" style="text-decoration: none;color: #000000" class="animsition-link">Back</a></div>
+	
+	<div class="photo" id="photo">
+        <!--//1-->
+        <input type="radio" name="btn" id="img1" checked/>
+        <div class="control">
+            <div class="image"><img src="../image/album2.jpg"></div>
+            <div class="nav">
+                <label for="img6" class="up leftjianbian"><</label>
+                <label for="img2" class="down rightjianbian">></label>
+            </div>
+        </div>
+        <!--//2-->
+        <input type="radio" name="btn" id="img2"/>
+        <div class="control">
+            <div class="image"><img src="../image/album1.jpg"></div>
+            <div class="nav">
+                <label for="img1" class="up leftjianbian"><</label>
+                <label for="img3" class="down rightjianbian">></label>
+            </div>
+        </div>
+        <!--//3-->
+        <input type="radio" name="btn" id="img3"/>
+        <div class="control">
+            <div class="image"><img src="../image/album3.jpg"></div>
+            <div class="nav">
+                <label for="img2" class="up leftjianbian"><</label>
+                <label for="img4" class="down rightjianbian">></label>
+            </div>
+        </div>
+        <!--//4-->
+        <input type="radio" name="btn" id="img4"/>
+        <div class="control">
+            <div class="image"><img src="../image/album4.jpg"></div>
+            <div class="nav">
+                <label for="img3" class="up leftjianbian"><</label>
+                <label for="img5" class="down rightjianbian">></label>
+            </div>
+        </div>
+        <!--//5-->
+        <input type="radio" name="btn" id="img5"/>
+        <div class="control">
+            <div class="image"><img src="../image/album5.jpg"></div>
+            <div class="nav">
+                <label for="img4" class="up leftjianbian"><</label>
+                <label for="img6" class="down rightjianbian">></label>
+            </div>
+        </div>
+        <!--//6-->
+        <input type="radio" name="btn" id="img6"/>
+        <div class="control">
+            <div class="image"><img src="../image/album6.jpg"></div>
+            <div class="nav">
+                <label for="img5" class="up leftjianbian"><</label>
+                <label for="img1" class="down rightjianbian">></label>
+            </div>
+        </div>
+        <div class="dots">
+            <label for="img1" class="dot" id="dot1"></label>
+            <label for="img2" class="dot" id="dot2"></label>
+            <label for="img3" class="dot" id="dot3"></label>
+            <label for="img4" class="dot" id="dot4"></label>
+            <label for="img5" class="dot" id="dot5"></label>
+            <label for="img6" class="dot" id="dot6"></label>
+        </div>
+    </div>
+
+	
+<div id="jsi-particle-container" class="container">	
+</div>
+			
+<script>
+var RENDERER = {
+	BASE_PARTICLE_COUNT :20,
+	WATCH_INTERVAL : 50,
+	
+	init : function(){
+		this.setParameters();
+		this.reconstructMethods();
+		this.setup();
+		this.bindEvent();
+		this.render();
+	},
+	setParameters : function(){
+		this.$window = $(window);
+		this.$container = $('#jsi-particle-container');
+		this.$canvas = $('<canvas />');
+		this.context = this.$canvas.appendTo(this.$container).get(0).getContext('2d');
+		this.particles = [];
+		this.watchIds = [];
+		this.gravity = {x : 0, y : 0, on : false, radius : 100, gravity : true};
+	},
+	setup : function(){
+		this.particles.length = 0;
+		this.watchIds.length = 0;
+		this.width = this.$container.width();
+		this.height = this.$container.height();
+		this.$canvas.attr({width : this.width, height : this.height});
+		this.distance = Math.sqrt(Math.pow(this.width / 2, 2) + Math.pow(this.height / 2, 2));
+		this.createParticles();
+	},
+	reconstructMethods : function(){
+		this.watchWindowSize = this.watchWindowSize.bind(this);
+		this.jdugeToStopResize = this.jdugeToStopResize.bind(this);
+		this.render = this.render.bind(this);
+	},
+	createParticles : function(){
+		for(var i = 0, count = (this.BASE_PARTICLE_COUNT * this.width / 500 * this.height / 500) | 0; i < count; i++){
+			this.particles.push(new PARTICLE(this));
+		}
+	},
+	watchWindowSize : function(){
+		this.clearTimer();
+		this.tmpWidth = this.$window.width();
+		this.tmpHeight = this.$window.height();
+		this.watchIds.push(setTimeout(this.jdugeToStopResize, this.WATCH_INTERVAL));
+	},
+	clearTimer : function(){
+		while(this.watchIds.length > 0){
+			clearTimeout(this.watchIds.pop());
+		}
+	},
+	jdugeToStopResize : function(){
+		var width = this.$window.width(),
+			height = this.$window.height(),
+			stopped = (width == this.tmpWidth && height == this.tmpHeight);
+			
+		this.tmpWidth = width;
+		this.tmpHeight = height;
+		
+		if(stopped){
+			this.setup();
+		}
+	},
+	bindEvent : function(){
+		this.$window.on('resize', this.watchWindowSize);
+		this.$container.on('mousemove', this.controlForce.bind(this, true));
+		this.$container.on('mouseleave', this.controlForce.bind(this, false));
+	},
+	controlForce : function(on, event){
+		this.gravity.on = on;
+		
+		if(!on){
+			return;
+		}
+		var offset = this.$container.offset();
+		this.gravity.x = event.clientX - offset.left + this.$window.scrollLeft();
+		this.gravity.y = event.clientY - offset.top + this.$window.scrollTop();
+	},
+	render : function(){
+		requestAnimationFrame(this.render);
+		
+		var context = this.context;
+		context.save();
+		context.fillStyle = 'hsla(0, 0%, 0%, 0.3)';
+		context.fillRect(0, 0, this.width, this.height);
+		context.globalCompositeOperation = 'lighter';
+		
+		for(var i = 0, particles = this.particles, gravity = this.gravity, count = particles.length; i < count; i++){
+			var particle = particles[i];
+			
+			for(var j = i + 1; j < count; j++){
+				particle.checkForce(context, particles[j]);
+			}
+			particle.checkForce(context, gravity);
+			particle.render(context);
+		}
+		context.restore();
+	}
+};
+var PARTICLE = function(renderer){
+	this.renderer = renderer;
+	this.init();
+};
+PARTICLE.prototype = {
+	THRESHOLD : 100,
+	SPRING_AMOUNT : 0.001,
+	LIMIT_RATE : 0.2,
+	GRAVIY_MAGINIFICATION : 10,
+	
+	init : function(){
+		this.radius = this.getRandomValue(5, 15);
+
+		this.x = this.getRandomValue(-this.renderer.width * this.LIMIT_RATE, this.renderer.width * (1 + this.LIMIT_RATE)) | 0;
+		this.y = this.getRandomValue(-this.renderer.width * this.LIMIT_RATE, this.renderer.height * (1 + this.LIMIT_RATE)) | 0;
+		this.vx = this.getRandomValue(-3, 3);
+		this.vy = this.getRandomValue(-3, 3);
+		this.ax = 0;
+		this.ay = 0;
+		this.gravity = false;
+		this.transformShape();
+	},
+	getRandomValue : function(min, max){
+		return min + (max - min) * Math.random();
+	},
+	transformShape : function(){
+		var velocity = Math.sqrt(this.vx * this.vx + this.vy * this.vy);
+		this.scale = 1 - velocity / 15;
+		this.hue = ((180 + velocity * 10) % 360) | 0;
+	},
+	checkForce : function(context, particle){
+		if(particle.gravity && !particle.on){
+			return;
+		}
+		var dx = particle.x - this.x,
+			dy = particle.y - this.y,
+			distance = Math.sqrt(dx * dx + dy * dy),
+			magnification = (particle.gravity ? this.GRAVIY_MAGINIFICATION : 1);
+			
+		if(distance > this.THRESHOLD * magnification){
+			return;
+		}
+		var rate = this.SPRING_AMOUNT / magnification / (this.radius + particle.radius);
+		this.ax = dx * rate * particle.radius;
+		this.ay = dy * rate * particle.radius;
+		
+		if(!particle.gravity){
+			particle.ax = -dx * rate * this.radius;
+			particle.ay = -dy * rate * this.radius;
+		}
+		if(distance > this.THRESHOLD){
+			return;
+		}
+		context.lineWidth = 3;
+		context.strokeStyle = 'hsla(' + this.hue + ', 70%, 30%, ' + (Math.abs(this.THRESHOLD - distance) / this.THRESHOLD) + ')';
+		context.beginPath();
+		context.moveTo(this.x, this.y);
+		context.lineTo(particle.x, particle.y);
+		context.stroke();
+	},
+	render : function(context){
+		context.save();
+		context.fillStyle = 'hsl(' + this.hue + ', 70%, 40%)';
+		context.translate(this.x, this.y);
+		context.rotate(Math.atan2(this.vy, this.vx) + Math.PI / 2);
+		context.scale(this.scale, 1);
+		context.beginPath();
+		context.arc(0, 0, this.radius, 0, Math.PI * 2, false);
+		context.fill();
+		context.restore();
+		
+		this.x += this.vx;
+		this.y += this.vy;
+		this.vx += this.ax;
+		this.vy += this.ay;
+		
+		if(this.x < -this.radius && this.vx < 0 || (this.x > this.renderer.width + this.radius) && this.vx > 0 || this.y < -this.radius && this.vy < 0 || (this.y > this.renderer.height + this.radius) && this.vy > 0){
+			var theta = this.getRandomValue(0, Math.PI * 2),
+				sin = Math.sin(theta),
+				cos = Math.cos(theta),
+				velocity = this.getRandomValue(-3, 3);
+				
+			this.x = -(this.renderer.distance + this.radius) * cos + this.renderer.width / 2;
+			this.y = -(this.renderer.distance + this.radius) * sin + this.renderer.height / 2;
+			this.vx = velocity * cos;
+			this.vy = velocity * sin;
+		}
+		this.transformShape();
+	}
+};
+$(function(){
+	RENDERER.init();
+});
+</script>
+<script>
+	setTimeout(function(){$('#tt1').addClass('animated tada');},1300);
+	setTimeout(function(){$('#tt2').addClass('animated tada');},1300);
+	setTimeout(function(){$('#tt3').addClass('animated tada');},1300);
+	setTimeout(function(){$('#tt4').addClass('animated tada');},1300);
+	setTimeout(function(){$('#tt5').addClass('animated tada');},1300);
+	
+	setTimeout(function(){$('#tt1').removeClass('tada');setTimeout(function(){$('#tt1').addClass('bounce');},800);},3300);
+	setTimeout(function(){$('#tt2').removeClass('tada');setTimeout(function(){$('#tt2').addClass('bounce');},1000);},3300);
+	setTimeout(function(){$('#tt3').removeClass('tada');setTimeout(function(){$('#tt3').addClass('bounce');},1200);},3300);
+	setTimeout(function(){$('#tt4').removeClass('tada');setTimeout(function(){$('#tt4').addClass('bounce');},1400);},3300);
+	setTimeout(function(){$('#tt5').removeClass('tada');setTimeout(function(){$('#tt5').addClass('bounce');},1600);},3300);
+</script>
+
+
+
+</body>
+</html>

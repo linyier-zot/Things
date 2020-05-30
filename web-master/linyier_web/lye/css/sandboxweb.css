@@ -1,0 +1,24 @@
+body{margin: 0;padding: 0;}
+div{position: absolute;text-align: center;animation-delay: 0.1s;} span{position: absolute;line-height: 40px;background: #FFFFFF;opacity: 0.5;border-top-left-radius: 20px;border-top-right-radius: 20px;} img{border-bottom-left-radius: 6px;border-bottom-right-radius: 6px;}
+	
+.fir{left: 15%;top:80px; width:400px;height:400px;}.fir span{left: 0px;top: 0px;width: 400px;height: 40px;} .fir div{left: 0px;top: 40px;width: 400px;height: 360px;border-bottom-left-radius: 6px;border-bottom-right-radius: 6px;}
+.sec{right:15%;top:80px; width:400px;height:400px;}.sec span{left: 0px;top: 0px;width: 400px;height: 40px;} .sec div{left: 0px;top: 40px;width: 400px;height: 360px;border-bottom-left-radius: 6px;border-bottom-right-radius: 6px;}
+.thi{left: 15%;top:500px; width:400px;height:400px;}.thi span{left: 0px;top: 0px;width: 400px;height: 40px;} .thi div{left: 0px;top: 40px;width: 400px;height: 360px;border-bottom-left-radius: 6px;border-bottom-right-radius: 6px;}
+.for{right:15%;top:500px; width:400px;height:400px;}.for span{left: 0px;top: 0px;width: 400px;height: 40px;} .for div{left: 0px;top: 40px;width: 400px;height: 360px;border-bottom-left-radius: 6px;border-bottom-right-radius: 6px;}
+.fiv{left:15%;top:920px; width:400px;height:400px;}.fiv span{left: 0px;top: 0px;width: 400px;height: 40px;} .fiv div{left: 0px;top: 40px;width: 400px;height: 360px;border-bottom-left-radius: 6px;border-bottom-right-radius: 6px;}
+.six{right:15%;top:920px; width:400px;height:400px;}.six span{left: 0px;top: 0px;width: 400px;height: 40px;} .six div{left: 0px;top: 40px;width: 400px;height: 360px;border-bottom-left-radius: 6px;border-bottom-right-radius: 6px;}
+#blank{left: 0px;top: 0px;width: 100%;height: 1400px;z-index: -1;background: url(../image/web-back.jpg);background-repeat: no-repeat;background-size: 100% 100%;background-attachment:fixed;}
+.vis{visibility: visible;opacity: 0.5;z-index: 3;}
+.hid{visibility: hidden;opacity: 0;z-index: -2}
+#lye1{left: 15%;top: 120px;width: 400px;height: 360px;transition: all 1s;background: #000000;color: aliceblue;line-height: 360px;font-size: 40px;}
+#lye2{right: 15%;top: 120px;width: 400px;height: 360px;transition: all 1s;background: #000000;color: aliceblue;line-height: 360px;font-size: 40px;}
+#lye3{left: 15%;top: 540px;width: 400px;height: 360px;transition: all 1s;background: #000000;color: aliceblue;line-height: 360px;font-size: 40px;}
+#lye4{right: 15%;top: 540px;width: 400px;height: 360px;transition: all 1s;background: #000000;color: aliceblue;line-height: 360px;font-size: 40px;}
+#lye5{left: 15%;top: 960px;width: 400px;height: 360px;transition: all 1s;background: #000000;color: aliceblue;line-height: 360px;font-size: 40px;}
+#lye6{right: 15%;top: 960px;width: 400px;height: 360px;transition: all 1s;background: #000000;color: aliceblue;line-height: 360px;font-size: 40px;}
+	
+#tex1{position: fixed;left: calc(50% - 50px);top: 100px; width: 100px;height: 120px;line-height: 120px;font-size: 100px;}
+#tex2{position: fixed;left: calc(50% - 50px);top: 220px; width: 100px;height: 120px;line-height: 120px;font-size: 100px;}
+#tex3{position: fixed;left: calc(50% - 50px);top: 340px; width: 100px;height: 120px;line-height: 120px;font-size: 100px;}
+#tex4{position: fixed;left: calc(50% - 50px);top: 460px; width: 100px;height: 120px;line-height: 120px;font-size: 100px;}
+#bac{position: absolute;left: 5px;top: 5px;width: 50px;height: 50px;text-align: center;line-height: 50px;color: aliceblue;background: #FFFFFF;opacity: 0.3;}
