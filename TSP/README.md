@@ -1,0 +1,1 @@
+Practical in AI introduction course.
